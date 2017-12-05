@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment B</title>
+	<link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color: #A0CFEC">
+	<div class="ui hidden divider"></div>
+	<div class="ui hidden divider"></div>
+	<div class="ui hidden divider"></div>
+	<div class="ui hidden divider"></div>
+	<div class="ui hidden divider"></div>
+	<div class="ui hidden divider"></div>
+	<div class="ui form attached segment" style="width: 60%; margin: auto">
+		<h1 class="ui header" style="text-align: center;">BOOK INPUT FORM</h1>
+		<div class="ui negative message error-message" id="error0"> 
+	        <label class="header" style="text-align: center;">Please complete the form</label>
+	    </div>
+	    <div class="ui success message" id="success">
+    		<div class="header" style="text-align: center;">Form Completed</div>
+		</div>
+		<div class="ui hidden divider"></div>
+		<div class="ui hidden divider"></div>
+		<div class="ui form">
+		<div class="field">
+    	<div class="two fields">
+    	  <div class="field">
+    		<label>IBSN Number</label>
+    	    <input type="number" name="IBSN" placeholder="IBSN Number" id="number">
+    	    <div class="ui pointing basic red label error-message" id="error01">
+    	    	<label> ISBN Number is not a valid modulus 11 number</label>	
+    	    </div>
+    	    <div class="ui pointing basic red label error-message" id="error02">
+    	    	<label>ISBN Number is not 13 character</label>
+    	    </div>
+    	    <div class="ui pointing basic red label error-message" id="error03">
+    	   		<label >ISBN Number is not numeric</label>
+    	 	 </div>
+    	  </div>
+    	  <div class="field">
+    	  	<label>Date published</label>
+    	  	<input type="date" name="date" id="date">
+    		</div>
+    	</div>
+    	<div class="ui form">
+    	<div class="field">
+    	  	<label>Title</label>
+    	    <input type="text" name="title" placeholder="Title" id="title">
+    	</div>
+    	<div class="field">
+    	  	<label>Publisher</label>
+    	    <input type="text" name="Publisher" placeholder="Publisher" id="publisher">
+    	</div>
+    	  <div class="field">
+    	  <label>Author</label>
+    	   <input type="text" name="Author" placeholder="Author" id="author">
+    	</div>
+    	</div>
+    	<div class="ui hidden divider"></div>
+    	<div class="ui form">
+    	<div class="two fields">
+    	  <div class="field">	
+    	  <label>Category code</label>
+    	   	<select id="code">
+    	   	   	<option value="1">IT</option>
+				<option value="2">Garden</option>
+				<option value="3">Music</option>
+				<option value="4">Electronics</option>
+				<option value="5">Fiction</option>
+				<option value="6">Biology</option>
+				<option value="7">Chemistry</option>
+				<option value="8">Maths</option>
+				<option value="9">Art</option>
+				<option value="10">Languages</option>
+				<option value="11">Internet</option>
+				<option value="12">Education</option>
+    	   	</select>
+    		</div>
+    	  	<div class="field">
+    			<label>In stock</label>
+    			<select id="stock">
+    				<option>Y</option>
+    				<option>N</option>
+    			</select>
+    		</div>
+    		</div>
+    		</div>
+    		<div class="ui hidden divider"></div>
+			<div class="ui hidden divider"></div>
+    		<div class="ui form">
+	       	<div class="ui bottom attached buttons">
+	        	<div class="ui primary button" id="save">Save</div>
+	      	</div>
+	    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="app.js"></script>
+</html>
