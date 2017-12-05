@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BookInputForm</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
+</head>
+<body>
+	 <div class="ui hidden divider"></div>
+	<div style="font-weight: bold;">
+		<div class="ui hidden divider"></div>
+  		<div class="ui form attached segment" style="width: 860px; margin:auto;background-color:lightblue">
+  		<div style="font-weight: bold;">
+    		<u>F</u>ile
+    		<u>R</u>ecords
+  		</div>
+  		<div class="ui text container" id="container">
+  			<h1 style="text-align: center;">BOOK INPUT FORM</h1>
+  			<div class="ui negative message error-message" id="error01">
+     			<label style="text-align: center;" class="header">Form is not complete</label>
+    		</div>
+        <div class="ui success message" id="error00">
+          <label style="text-align: center;" class="header">Success</label>
+        </div>
+    		<div class="message-box"></div>
+			<div class="ui hidden divider"></div>
+   			<div class="two fields">
+      			<div class="field">
+      				<label >ISBN Number</label>
+      				<input id="input_number" class="input" type="text">
+              <div class="ui pointing basic red label error-message" id="error02">
+                <label>ISBN Number is not a valid modulus 11 number</label>
+              </div>
+               <div class="ui pointing basic red label error-message" id="error03">
+                <label>ISBN Number is not 13 characters</label>
+              </div>
+      			</div>
+      		<div class="field">
+      			<label>Date published</label>
+      			<input id="input_date_published" class="input" type="date">
+      		</div>
+      	</div>
+      		<div class="field">
+      			<label>Title</label>
+      			<input id="input_title" class="input" type="text">
+      		</div>
+      		<div class="ui hidden divider"></div>
+			<div class="field">
+				<label>Publisher</label>
+				<input id="input_publisher" class="input" type="text">
+			</div>
+		<div class="ui hidden divider"></div>
+		<div class="field">
+			<label>Author</label>
+			<input id="input_author" class="input" type="text">
+		</div>
+		<div class="ui hidden divider"></div>
+		<div class="two fields">
+			<div class="field">
+        <label>Category Code</label>
+        <select class="ui dropdown input-membership-type" name='type' id="input_category_code">
+                <option value="IT">IT</option>
+                <option value="Music">Music</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Biology">Biology</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Maths">Maths</option>
+                <option value="Art">Art</option>
+                <option value="Languages">Langueges</option>
+                <option value="Internet">Internet</option>
+                <option value="Education">Education</option>
+        </select>
+			</div>
+			<div class="field">
+				<label>In Stock</label>
+				<select class="ui dropdown input-membership-type" name='type' id="input_in_stock">
+          			<option value="F">Y</option>
+          			<option value="S">N</option>
+        </select>
+			</div>
+		</div>
+		<div class="ui hidden divider"></div>
+      	<div class="ui form">
+        	<div class="ui bottom attached buttons">
+          	<div class="ui primary button" id='button'>Save</div>
+        </div>
+	</div>
+</body>
+<script src="index.js"></script>
+</html>
