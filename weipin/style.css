@@ -1,0 +1,24 @@
+#container{
+	width: 600px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+#topic{
+	margin: 30px 0;
+	text-align: center;
+}
+
+.error{
+	color: red;
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+#submit{
+	width: 100px;
+	height: 30px;
+	background-color: lightblue;
+	border: solid 1px lightblue;
+	border-radius: 3px;
+}

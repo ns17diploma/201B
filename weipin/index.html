@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>BOOK INPUT FORM</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="node_modules/semantic-ui-css/semantic.min.css">
+	</head>
+	<body onload="error()">
+		<section id="container">
+			<h1 id="topic">BOOK INPUT FORM</h1>
+			<form class="ui form">
+				<div class="two fields">
+					<div class="field">
+						<span>
+							<label for="isbnN">&nbsp;ISBN Number</label>
+							<a class="error isbnError">Invalid input</a>
+							<a class="error isbnError1">Invalid input1</a>
+							<a class="error isbnError2">Invalid input2</a>
+							<a class="error isbnError3">Invalid input3</a>
+							<a class="error isbnError4">Invalid input4</a>
+						</span>
+						<input id="isbnN" type="text" name="ISBN-Number" placeholder="ISBN Number">
+					</div>
+					<div class="field">
+						<span>
+							<label for="category">&nbsp;Category code</label>
+							<a class="error categoryError">Please choose</a>
+						</span>
+						<select name="category" id="category">
+							<option value="">Please select</option>
+							<option value="IT">IT</option>
+							<option value="Garden">Garden</option>
+							<option value="Music">Music</option>
+							<option value="Electronics">Electronics</option>
+							<option value="Fiction">Fiction</option>
+							<option value="Biology">Biology</option>
+							<option value="Chemistry">Chemistry</option>
+							<option value="Maths">Maths</option>
+							<option value="Art">Art</option>
+							<option value="Languages">Languages</option>
+							<option value="Internet">Internet</option>
+							<option value="Education">Education</option>
+						</select>
+					</div>
+				</div>
+				<div class="field">
+					<span>
+						<label for="title">&nbsp;Title</label>
+						<a class="error titleError">Invalid input</a>
+					</span>
+					<input id="title" type="text" name="title" placeholder="Title">
+				</div>
+				<div class="field">
+					<span>
+						<label for="publisher">&nbsp;Publisher</label>
+						<a class="error publisherError">Invalid input</a>
+					</span>
+					<input id="publisher" type="text" name="publisher" placeholder="Publisher">
+				</div>
+				<div class="field">
+					<span>
+						<label for="author">&nbsp;Author</label>
+						<a class="error authorError">Invalid input</a>
+					</span>
+					<input id="author" type="text" name="author" placeholder="Author">
+				</div>
+				<div class="field">
+					<span>
+						<label for="datePublished">&nbsp;Date published</label>
+						<a class="error dateError">Invalid input</a>
+					</span>
+					<input id="datePublished" type="date" name="date-pulished">
+				</div>
+				<div class="five wide field">
+					<span>
+						<label for="stock">&nbsp;In stock</label>
+						<a class="error stockError">Please choose</a>
+					</span>
+					<select name="stock" id="stock">
+						<option value="">Please select</option>
+						<option value="Y">Y</option>
+						<option value="N">N</option>
+					</select>
+				</div>
+				<input id="submit" type="button" value="Save Record"></input>
+			</form>
+		</section>
+		<script src="app.js"></script>
+	</body>
+</html>

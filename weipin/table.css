@@ -1,0 +1,14 @@
+#container{
+	border: solid 1px black;
+	margin: auto;
+	width: 960px;
+	background-color: lightgrey;
+}
+
+#title{
+	text-align: center;
+}
+
+#break{
+	margin-bottom: 10px;
+}
