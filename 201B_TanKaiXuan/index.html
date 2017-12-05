@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Input Form</title>
+    <link rel="stylesheet" href="Framework/semantic.min.css">
+    <link rel="stylesheet" href="css/type.css">
+    <script src="js/app.js"></script>
+</head>
+<body id="index_body">
+  <form class="ui big form">
+    <h2 class="ui dividing header" id="Title">Book Input Form</h2>
+    <div class="ui big form">
+      <div class="two fields">
+        <div class="field" id="validate_ISBN_number">
+          <label>ISBN Number</label>
+            <input type="text" id="ISBN_number">
+            <div class="ui pointing red basic label removeLable" id="label_ISBN_number" style="display: none">
+              Please input the correct ISBN_Number
+            </div>
+        </div>
+        <div class="field" id="validate_title">
+            <label>Title</label>
+            <input type="text"  id="title">
+            <div class="ui pointing red basic label removeLable" id="label_title" style="display: none">
+              Please input the title
+            </div>
+        </div>
+      </div>
+    </div>
+    <br>
+       
+    <div class="ui big form">
+      <div class="two fields">
+        <div class="field" id="validate_publisher">
+          <label>Publisher</label>
+          <input type="text" id="publisher">   
+          <div class="ui pointing red basic label removeLable" id="label_publisher" style="display: none">
+            Please input the publisher
+          </div>      
+        </div>
+        <div class="field" id="validate_author">
+          <label>Author</label>
+            <input type="text" id="author">
+            <div class="ui pointing red basic label removeLable" id="label_author" style="display: none">
+              Please input the author
+        </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="ui big form">
+    <div class="two fields">
+      <div class="field" id="validate_date_published">
+        <label>Date Published</label>
+        <input type="date" name="bday"   id="date_published">
+        <div class="ui pointing red basic label removeLable" id="label_date_published" style="display: none">
+          Please input the complete date
+        </div>
+      </div>
+      <div class="field">
+        <label>Category Code</label>
+        <select id="Category_code">
+          <option value="IT">IT</option>
+          <option value="Garden">Garden</option>
+          <option value="Music">Music</option>
+          <option value="artist">jones Blue</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value="Electronic">Electronic</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Biology">Biology</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Maths">Maths</option>
+          <option value="Art">Art</option>
+          <option value="Language">Language</option>
+          <option value="Internet">Internet</option>
+          <option value="Education ">Education</option>  
+        </select>
+      </div>
+    </div>
+    </div>
+    <div class="field">
+      <label>In stok</label>
+      <select id="stok">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+    <br><br>
+    <div class="newTtem"></div>
+    <div class="field">
+      <button class="ui mega button" type="button" id="submit_button" onclick="validation()">Submit</button>  
+    </div>
+    
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" onclick="clickSpan()">&times;</span>
+        <h2>Book Input Form</h2>
+      </div>
+      <div class="modal-body">
+       <p>Success To submit The Form! I</p>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+    </div>
+  </form>
+
+</body>
+</html>
