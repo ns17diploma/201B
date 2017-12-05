@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Book Input Form</title>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="Semantic-UI-CSS-master/semantic.min.css">
+</head>
+<body>
+    <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+	<div class="ui form attached segment" style="width: 45%; margin: auto">
+		<div>
+			<b><u>F</u>ile
+			<u>R</u>ecords</b>
+		</div>
+		<h1 class="ui header" style="text-align: center;">Book Input Form</h1>
+		<div class="ui negative message error-message" id="error0"> 
+	        <label class="header" style="text-align: center;">Please complete the form</label>
+	    </div>
+	    <div class="ui success message" id="error00"> 
+	        <label class="header" style="text-align: center;">Success</label>
+	    </div>
+	    <div>
+			<div class="two fields">
+			  	<div class="field">
+			    	<label>ISBN Number:</label>
+			    	<input type="number" class="input" id="number1" placeholder="ISBN Number">
+			    	<div class="ui pointing basic red label error-message" id="error01">
+			      		<label>ISBN Number is not a valid modulus 11 number</label>
+				   	</div>
+				   	<div class="ui pointing basic red label error-message" id="error02">
+			      		<label>ISBN Number is not 10 characters</label>
+				   	</div>
+			  	</div>
+			  	<div class="field">
+			   		<label>Category code:</label>
+			   		<select class="ui dropdown input-save" id="code">
+			   			<option value="1">IT</option>
+			   			<option value="2">Garden</option>
+			   			<option value="3">Music</option>
+			   			<option value="4">Electronics</option>
+			   			<option value="5">Fiction</option>
+			   			<option value="6">Biology</option>
+			   			<option value="7">Chemistry</option>
+			   			<option value="8">Maths</option>
+			   			<option value="9">Art</option>
+			   			<option value="10">Languages</option>
+			   			<option value="11">Internet</option>
+			   			<option value="12">Education</option>
+			        </select>
+			  	</div>    	
+		   	</div>
+			<div class="field">
+			    <label>Title:</label>
+			    <input type="text" class="input" placeholder="Title" id="title">
+		   	</div>
+		   	<div class="field">
+			    <label>Publisher:</label>
+			    <input type="text" class="input" placeholder="Publisher" id="publisher">
+		  	</div>
+		   	<div class="field">
+			    <label>Author:</label>
+			    <input type="text" class="input" placeholder="Author" id="author">
+		   	</div>
+		   	<div class="two fields">
+			  	<div class="field">
+			   		<label>Date published:</label>
+			   		<input type="date" class="input" id="date">
+			  	</div>    	
+			  	<div class="field">
+			    	<label>In stock:</label>
+			   		<select class="ui dropdown input-save" id="stock">
+						<option value="Y">Y</option>
+						<option value="N">N</option>
+			   		</select>
+			  	</div>
+		   </div>	
+		</div>
+		<div class="ui form">
+	       	<div class="ui bottom attached buttons">
+	        	<div class="ui primary button" id="save">Save</div>
+	      	</div>
+	    </div>
+	</div>
+</body>
+<script src="js/index.js"></script>
+</html>

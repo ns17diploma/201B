@@ -1,0 +1,14 @@
+body{
+	font-style: italic;
+}
+
+table tr td{
+	border: solid 1px grey;
+	text-align: center;
+	font-size: 15px;
+}
+table tr th{
+	border: solid 1px black;	
+	font-weight: bold;
+	font-size: 18.5px;
+}
