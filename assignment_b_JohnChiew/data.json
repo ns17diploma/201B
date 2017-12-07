@@ -1,0 +1,29 @@
+[
+  {
+    "isbnN": "0-07-881442-1",
+    "title": "1212312312123",
+    "publisher": "123123123",
+    "author": "123123123",
+    "datePublished": "3123-12-31",
+    "category": "IT",
+    "inStock": "Y"
+  },
+  {
+    "isbnN": "0-07-881442-1",
+    "title": "The End of Life",
+    "publisher": "DavidSum",
+    "author": "JohnChiew",
+    "datePublished": "1111-11-11",
+    "category": "Electronics",
+    "inStock": "Y"
+  },
+  {
+    "isbnN": "0-07-881442-1",
+    "title": "Mystic",
+    "publisher": "David Sum",
+    "author": "Isssac Chiew",
+    "datePublished": "2017-09-07",
+    "category": "Maths",
+    "inStock": "Y"
+  }
+]

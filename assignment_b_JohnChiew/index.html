@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Input Form</title>
+  <link rel="stylesheet" href="node_modules/semantic-ui-css/semantic.min.css">
+</head>
+<body>
+  <div class="ui hidden divider"></div>
+
+  <div class="ui text container inverted segment" id="main-container">
+    <h1>Book Input Form</h1>
+      <div class="ui inverted form">
+        <div class="field">
+          <label>ISBN Number</label>
+          <input type="text" id="isbn">
+            <div class="ui pointing red basic label hideMessage errorMessage01">
+              Please enter 10 digits 3 "-" and digits is modulus by 11. (EX : "0-07-881442-1")
+            </div>
+        </div>
+
+        <div class="field">
+          <label>Title</label>
+          <input type="text" id="title">
+            <div class="ui pointing red basic label hideMessage errorMessage02">
+              Please enter the title of the book
+            </div>
+        </div>
+  
+        <div class="field">
+          <label>Publisher</label>
+          <input type="text" id="publisher">
+            <div class="ui pointing red basic label hideMessage errorMessage03">
+              Please enter the publisher of the book
+            </div>
+        </div>
+   
+        <div class="field">
+          <label>Author</label>
+          <input type="text" id="author">
+            <div class="ui pointing red basic label hideMessage errorMessage04">
+              Please enter the author of the book
+            </div>
+        </div>
+
+        <div class="field">
+          <label>Date published</label>
+          <input type="date" max="2017-12-31" id="datePublished">
+            <div class="ui pointing red basic label hideMessage errorMessage05">
+              Please select the date of publish
+            </div>
+        </div>
+
+        <div class="field">
+          <label>Category code</label>
+          <select id="category">
+            <option value="">Select a Category</option>
+            <option value="IT">IT</option>
+            <option value="Garden">Garden</option>
+            <option value="Music">Music</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Biology">Biology</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Maths">Maths</option>
+            <option value="Art">Art</option>
+            <option value="Languages">Languages</option>
+            <option value="Internet">Internet</option>
+            <option value="Education">Education</option>
+          </select>
+            <div class="ui pointing red basic label hideMessage errorMessage06">
+              Please select the category code
+            </div>
+        </div>
+
+        <div class="three wide field">
+          <label>In stock</label>
+          <select id="inStock">
+            <option value="">Y or N</option>
+            <option value="Y">Y</option>
+            <option value="N">N</option>
+          </select>
+            <div class="ui pointing red basic label hideMessage errorMessage07">
+              Please select Y / N
+            </div>
+        </div>
+        
+        <button class="ui button inverted" type="submit" onclick="submit()">Save_Record</button>
+  </div>
+</div>
+
+<script type="text/javascript" src="validation.js"></script>
+</body>
+</html>

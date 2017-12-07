@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book record</title>
+  <link rel="stylesheet" href="node_modules/semantic-ui-css/semantic.min.css">
+<style>
+  #content{
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px 10px;
+  }
+  .tbody{
+    color: black;
+    text-align: left;
+  }
+  .tbody th,td,tr{
+    padding: 5px 10px;
+  }
+  h1{
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <section id="content">
+    <h1>BOOK RECORD</h1>
+    <table id="displayTable">
+      <thead></thead> 
+      <tbody class="tbody"></tbody>
+    </table>
+  </section>        
+  <div class="ui hidden divider"></div>
+  <div class="ui pagination menu" id="members-pagination"></div>
+
+  <script type="text/javascript" src="validation.js"></script>
+</body>
+</html>
