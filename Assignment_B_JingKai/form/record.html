@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Record</title>
+	<style>
+		#main {
+			width: 65vw;
+			margin: auto;
+		}
+		#showCont tr {
+			border: solid 1px black;
+			width: 100%;
+		}
+		#showCont tr th {
+			border-right: solid 1px black;
+			width: 60%; 
+		}
+		#showCont tr td {
+			width: 40%;
+		}
+
+	</style>
+	<link rel="stylesheet" href="semantic-ui/semantic.min.css">
+</head>
+<body>
+	<div id="main">
+		<table id="showCont"></table>
+	</div>
+	<div id="allBtn"></div>
+</body>
+<script>
+	var $ = require('jquery')
+	var jsf = require('jsonfile')
+	var chunk = require('chunk')
+	var file = './allData/data.json'
+	var fs = require('fs')
+
+	$(function(){
+		let theData = jsf.readFileSync(file)
+		let chunkData = chunk(theData, 10)
+		makeTable(chunkData[0])
+
+		if (chunkData.length > 1) {
+			makeBtn(chunkData)
+		}
+
+		function makeTable (num) {
+			$('#showCont').html("")
+			for (var i in num) {
+				let theCont = `<tr><th>ISBN Number:</th><td>${num[i]['ISBN']}</td></tr>
+				<tr><th>Title:</th><td>${num[i]['Title']}</td></tr>
+				<tr><th>Publisher:</th><td>${num[i]['Publisher']}</td></tr>
+				<tr><th>Author:</th><td>${num[i]['Author']}</td></tr>
+				<tr><th>Date Published:</th><td>${num[i]['Date']}</td></tr>
+				<tr><th>Category Code:</th><td>${num[i]['Category']}</td></tr>
+				<tr><th>In Stock:</th><td>${num[i]['Stock']}</td></tr><tr><td></td></tr>`
+
+				$('#showCont').append(theCont)
+			}
+		}
+
+		function makeBtn (number) {
+			$('#allBtn').html("")
+			for (var i = 0; i < number.length; i++) {
+				let theBtn = `<button class="ui button" value="${i}">${i + 1}</button>`
+
+				$('#allBtn').append(theBtn)		
+			}
+			$('.button').click(function(){
+				$this = $(this)
+				makeTable(number[$this.val()])
+			})
+		}
+
+	})	
+</script>
+</html>

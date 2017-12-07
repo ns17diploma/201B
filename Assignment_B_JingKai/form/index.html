@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="semantic-ui/semantic.min.css">
+	<style>
+		h1, #main {
+			text-align: center;
+			}
+		.input * {
+			width: 500px;
+		}
+		button {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>BOOK INPUT FORM</h1>
+	<form id="main" class="ui fluid form">
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<label id="form_error" class="ui pointing red basic label"></label>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="four wide column">
+				ISBN Number
+			</div>
+			<div class="twelve wide column">
+				<div class="ui input">
+					<input type="text" id="ISBN" class="getValue">
+				</div>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<label id="ISBN_error" class="ui pointing red basic label"></label>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="four wide column">
+				Title	
+			</div>
+			<div class="twelve wide column">
+				<div class="ui input">
+					<input type="text" id="getTitle" class="getValue">
+				</div>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<label id="title_error" class="ui pointing red basic label"></label>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="four wide column">
+				Publisher
+			</div>
+			<div class="twelve wide column">
+				<div class="ui input">
+					<input type="text" id="getPublisher" class="getValue">
+				</div>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<label id="publisher_error" class="ui pointing red basic label"></label>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="four wide column">
+				Author
+			</div>
+			<div class="twelve wide column">
+				<div class="ui input">
+					<input type="text" id="getAuthor" class="getValue">
+				</div>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<label id="author_error" class="ui pointing red basic label"></label>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="four wide column">
+				Date published
+			</div>
+			<div class="twelve wide column">
+				<div class="ui input">
+					<input type="date" id="getDate" class="getValue">
+				</div>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<label id="date_error" class="ui pointing red basic label"></label>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="four wide column">
+				Category Code
+			</div>
+			<div class="twelve wide column">
+				<select name="category" id="getCategory" class="ui search dropdown getValue">
+					<option value="">None</option>
+					<option value="IT">IT</option>
+					<option value="Garden">Garden</option>
+					<option value="Music">Music</option>
+					<option value="Electronics">Electronics</option>
+					<option value="Fiction">Fiction</option>
+					<option value="Biology">Biology</option>
+					<option value="Chemistry">Chemistry</option>
+					<option value="Maths">Maths</option>
+					<option value="Art">Art</option>
+					<option value="Languages">Languages</option>
+					<option value="Internet">Internet</option>
+					<option value="Education">Education</option>
+				</select>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<label id="category_error" class="ui pointing red basic label"></label>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="four wide column">
+				In Stock
+			</div>
+			<div class="twelve wide column">
+				<select name="stock" id="getStock" class="ui search dropdown getValue">
+					<option value=""></option>
+					<option value="Y">Yes</option>
+					<option value="N">No</option>
+				</select>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<label id="stock_error" class="ui pointing red basic label"></label>
+			</div>
+		</div>
+		<div class="ui grid">
+			<div class="eight wide column">
+				<button id="saveBtn" type="button" class="ui primary button">Save Record</button>
+			</div>
+			<div class="eight wide column">
+				<button id="clearAll" class="ui button">Clear</button>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
