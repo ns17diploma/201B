@@ -1,0 +1,8 @@
+table tr td,th{
+	border: solid 2px red;
+	width: 1250px;
+}
+#button1 tr td{
+	border: solid 2px red;
+	width: 1250px;
+}

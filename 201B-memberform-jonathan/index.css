@@ -1,0 +1,38 @@
+
+.space{
+	margin: 10px;
+}
+.float{
+	float: right;
+}
+.long{
+	width: 350px;
+}
+.clear{
+	clear: both;
+}
+.longg{
+	width: 720px;
+}
+#width{
+	width: 780px;
+	margin: auto;
+}
+.error02{
+	color:  red;
+}
+.error03{
+	color:  red;
+}
+.error04{
+	color:  red;
+}
+.error05{
+	color:  red;
+}
+.save{
+	width: 350px;
+}
+.errorISBN{
+	color: red;
+}
