@@ -1,0 +1,17 @@
+{
+  "name": "assignment_b_tanliwei",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "chunk": "^0.0.2",
+    "jsonfile": "^4.0.0",
+    "semantic-ui-css": "^2.2.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

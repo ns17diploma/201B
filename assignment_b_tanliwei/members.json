@@ -1,0 +1,29 @@
+[
+  {
+    "ISBNNum": "0-20-118244-0",
+    "Title": "hh",
+    "Publisher": "hh",
+    "DatePublished": "2001-01-01",
+    "Author": "hh",
+    "CategoryCode": "IT",
+    "InStock": "on"
+  },
+  {
+    "ISBNNum": "0-07-881442-1",
+    "Title": "jj",
+    "Publisher": "j",
+    "DatePublished": "2001-01-01",
+    "Author": "k",
+    "CategoryCode": "IT",
+    "InStock": "on"
+  },
+  {
+    "ISBNNum": "0-07-881442-1",
+    "Title": "Eyes of Eagle",
+    "Publisher": "James Reborn",
+    "DatePublished": "2017-12-05",
+    "Author": "Jonny Eager",
+    "CategoryCode": "Languages",
+    "InStock": "on"
+  }
+]
