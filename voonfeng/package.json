@@ -1,0 +1,16 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "description": "json",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chunk": "0.0.2",
+    "electron": "^1.7.10",
+    "jquery": "^3.2.1"
+  }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" href="semantic.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>BOOK INPUT FORM</title>
+</head>
+<body onload="error()">
+
+  <p class="linetwo">BOOK INPUT FORM</p>
+
+  <section class="marginleft">
+
+  <div class="ui form">
+    <div class="two fields">
+      <div id="errorisbn" class="field">
+        <label>ISBN Number</label>
+        <input id="check" class="common1 input_isbm_number" placeholder="ISBN Number" type="text">
+        <label class="errormassage0">ISBN Number is not numeric (ignoring “-“)</label>
+        <label class="modulus">ISBN Number is not a valid modulus 11 number</label>
+        <label class="errormassage1">ISBN Number is not 13 characters</label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="ui form">
+    <div class="two fields">
+      <div id="errortitle" class="field">
+        <label>Title</label>
+        <input id="titleerror" class="common input_title" type="text">
+        <label class="errormassage2">Please Input your Title</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui form">
+    <div class="two fields">
+      <div id="errorpublisher" class="field">
+        <label>Publisher</label>
+        <input id="publishererror" class="common input_publisher" type="text">
+        <label class="errormassage3">Please Input your Publisher</label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="ui form">
+    <div class="two fields">
+      <div id="errorauthor" class="field">
+        <label>Author</label>
+        <input id="authorerror" class="common input_author" type="text">
+        <label class="errormassage4">Please Input your Author</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui form">
+    <div class="two fields">
+      <div id="errordate" class="field">
+        <label>Date published</label>
+        <input id="dateerror" class="common input_date" type="date">
+        <label class="errormassage5">Invalid Date published</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui form">
+    <div class="two fields">
+      <div id="errorcaterogy" class="field">
+        <label>Category code</label>
+        <select class="common input_category">
+          <option value="IT">IT</option>
+          <option value="Garden">Garden</option>
+          <option value="Music">Music</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Biology">Biology</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Maths">Maths</option>
+          <option value="Art">Art</option>
+          <option value="Languages">Languages</option>
+          <option value="Internet">Internet</option>
+          <option value="Education">Education </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui form">
+    <div class="two fields">
+      <div id="erroraddress" class="field">
+        <label>In stock</label>
+        <select class="input_stock">
+          <option value="Y">Y</option>
+          <option value="N">N</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+
+  <button id="myBtn" class="save button" type="submit" >Save  Record</button>
+  <button class="cancel button">Cancel</button>
+  <br><br>
+    <label class="inputcheck">Please check your form</label>
+  <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" onclick="clickSpan()">&times;</span>
+        <h2>Complete</h2>
+      </div>
+      <div class="modal-body">
+        <p>Completle Submit The Form</p>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+
+    
+  </section>
+  <script src="index.js"></script>
+</body>
+</html>
