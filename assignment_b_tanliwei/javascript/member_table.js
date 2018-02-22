@@ -1,5 +1,8 @@
-app_js = 'app.js';
-chunk = require('chunk');
+var app_js = './app.js';
+var chunk = require('chunk');
+var jsf = require('jsonfile');
+var $ = require('jquery');
+var file = 'members.json'
 
 $(function(){
 
@@ -28,31 +31,31 @@ function make_table(members)
   let member_row_html = 
   '<tr>'+
     '<td>'+'ISBN Number'+'</td>'+
-    '<td>'+ members[i].ISBNNum +'</td>'+
+    '<td>'+ members[i].isbn_number +'</td>'+
   '</tr>'+
   '<tr>'+
     '<td>'+'Title'+'</td>'+
-    '<td>'+ members[i].Title +'</td>'+
+    '<td>'+ members[i].title +'</td>'+
   '</tr>'+
   '<tr>'+
     '<td>'+'Publisher'+'</td>'+
-    '<td>'+ members[i].Publisher +'</td>'+
+    '<td>'+ members[i].publisher +'</td>'+
   '</tr>'+
   '<tr>'+
     '<td>'+'Date Published'+'</td>'+
-    '<td>'+ members[i].DatePublished +'</td>'+
+    '<td>'+ members[i].date +'</td>'+
   '</tr>'+
   '<tr>'+
     '<td>'+'Author'+'</td>'+
-    '<td>'+ members[i].Author +'</td>'+
+    '<td>'+ members[i].author +'</td>'+
   '</tr>'+
   '<tr>'+
     '<td>'+'Category Code'+'</td>'+
-    '<td>'+ members[i].CategoryCode +'</td>'+
+    '<td>'+ members[i].category +'</td>'+
   '</tr>'+
   '<tr>'+
     '<td>'+'In Stock'+'</td>'+
-    '<td>'+ members[i].InStock +'</td>'+
+    '<td>'+ members[i].check_box +'</td>'+
   '</tr>'+
   '<tr>'+
     '<td style="padding-bottom:20px">'+'</td>'+

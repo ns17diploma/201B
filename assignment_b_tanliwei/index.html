@@ -3,7 +3,9 @@
   <head>
   <meta charset="UTF-8">
   <title>Member Form</title>
-  <script src="node_modules/semantic-ui-css/semantic.min.js"></script>
+
+  <!-- REQUIRE SOURCE -->
+
   <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
   </head>
@@ -26,32 +28,49 @@
         </div>
           <p>Fill out the form below to sign-up for a new account</p>
       </div>
+
+      <!-- MEMBER FORM TITLE -->
+
       <div class="ui form attached segment">
         <div class="two fields">
           <div class="field">
             <label>ISBN Number</label>
-            <input id="isbn_number" class="input_save" placeholder="0-07-881442-1" value="0-07-881442-1">
+            <input id="isbn_number" class="input_save" placeholder="0-13-527754-X" value="0-13-527754-X">
           </div>
+
+      <!-- TITLE  -->
+
           <div class="field">
             <label>Title</label>
             <input id="title" class="input_save" name='member_number' value="" placeholder="Title">
           </div>
         </div>
+
+        <!-- PUBLISHER  -->
+
         <div class="two fields">
           <div class="field">
             <label>Publisher</label>
             <input id="publisher" class="input_save" placeholder="Publisher">
           </div>
+
+         <!-- DATE PUBLISHED  -->  
           <div class="field">
             <label>Date Published</label>
             <input id="date" type="date" placeholder="Date Published" value="2001-01-01">
           </div>
         </div>
+
+        <!-- AUTHOR  -->
+
         <div class="two fields">
           <div class="field">
             <label>Author</label>
             <input id="author" class="input_save" name='first-name' type="text" value="" placeholder="Author">
           </div>
+
+          <!-- CATEGORY -->
+
           <div class="field">
             <label>Category Code</label>
             <select id="category" class="ui dropdown" name="sex">
@@ -71,14 +90,16 @@
           </div>
         </div>
 
+        <!-- IN STOCK  -->
           <div class="field">
             <label>In Stock</label>
-            <div class="ui fitted checkbox">
-              <input id="check_box" type="checkbox" checked="">
-            </div>
+            <select id="check_box" class="ui dropdown" name="check_box">
+              <option value="Y">Y</option>
+              <option value="N">N</option>
+            </select>
           </div>
           
-         
+        <!-- SAVE AND CLEAR BUTTON  -->
         <button id="save_button" class="ui primary button">Save</button>
         <button id="clear_button" class="ui button">Discard</button>
 

@@ -1,13 +1,35 @@
-let jsf = require('jsonfile');
 let $ = require('jquery');
-let file = 'members.json';
-let status = true;
-///////////////save form value
+let fs = require('fs');
+const JsonFileManager = require('./oop_manager/jsf_manager');
+const ViewManager = require('./oop_manager/view_manager(function)');
+const Member = require('./oop_manager/member');
+const Validator = require('./oop_manager/validator');
 
-  $(function(){
+$(function(){
+  const vm = new ViewManager()
+  const jfm = new JsonFileManager()
+  const member = new Member()
+  const validator = new Validator()
+ 
+/******************************************/ 
+////CLEAR BUTTON
+  $('#clear_button').on('click', function(){
+      vm.clear_button()
+  })
+
+/******************************************/ 
+////SAVE BUTTON
     $('#save_button').on('click',function(){
-      if ($('.field').hasClass('error')) {
 
+        validator.date()
+        validator.isbn_number()
+        validator.title_case()
+        validator.author_case()
+        validator.publisher_case()
+
+/******************************************/ 
+////ERROR BUTTON
+      if ($('.field').hasClass('error')) {
         let upper_message = `
         <div class="ui negative message error-message">
         <i class="close icon"></i>
@@ -17,6 +39,8 @@ let status = true;
         <p>Some Error is in Your Form Please Try Again</p>
         </div>
       `
+/******************************************/ 
+////SUCCESS BUTTON
       $('#message_box').html(upper_message)
       }else{
         let upper_message = `
@@ -28,109 +52,20 @@ let status = true;
         <p>Your Form Register is Successful, Thank You</p>
         </div>
         `
+/******************************************/ 
+////GET DATA VALUE
         $('#message_box').html(upper_message)
-        var obj = {
-        ISBNNum:$('#isbn_number').val(),
-        Title:$('#title').val(),
-        Publisher:$('#publisher').val(),
-        DatePublished:$('#date').val(),
-        Author:$('#author').val(),
-        CategoryCode:$('#category').val(),
-        InStock:$('#check_box').val(),
-        }
-        var arr = jsf.readFileSync(file);
-        arr.push(obj);
-        jsf.writeFile('members.json',arr,{spaces: 2},function(err){
-        console.error(err)
-        clear_button()
-      });
+        var obj = new Member( 
+        $('#isbn_number').val(),
+        $('#title').val(),
+        $('#publisher').val(),
+        $('#date').val(),
+        $('#author').val(),
+        $('#category').val(),
+        $('#check_box').val()
+        );
+        vm.clear_button()
+        jfm.saveMembers(obj.transformObj());
       }
     })
   })
-
-
-  ////////////////function
-
-  function error_message(input_id, message){
-      let message_html = '<div class="ui pointing red label error_message">' +
-      message +'</div>'
-      status = false;
-      $(input_id).after(message_html);
-      $(input_id).closest('.field').addClass('error')
-    }
-
-  function remove_error_message(input_id){
-      status = true;
-      $('.error_message').remove()
-      $(input_id).closest('.field').removeClass('error')
-    }
-
-  function clear_button(){
-      $('.input_save').val('')
-      $('.error_message').remove()
-      $('.field').removeClass('error')
-  }
-    $('#clear_button').on('click', function(){
-      clear_button()
-    })
-
-  ////////////////form validation
-
-    $('#save_button').on('click', function(){
- 
-    ////
-    
-      if ($('#date').val().length > 10 ) {
-        error_message('#date', 'Incorrect Date of Join Format');
-      }else{
-        remove_error_message('#date');
-      }
-      
-    ////
-      var remove_dash = $('#isbn_number').val().replace(/-/g, '');
-      modulus_eleven = 0;
-      for(var i = 0; i<remove_dash.length; i++){
-        let x = 10 - i;
-        modulus_eleven += remove_dash[i] * x;
-      }  
-      ///
-       var remove_x = $('#isbn_number').val().replace(/X/g, 1);
-      modulus_eleven = 0;
-      for(var i = 0; i<remove_x.length; i++){
-        let x = 10 - i;
-        modulus_eleven += (remove_x[i] + 9) * x;
-      }  
-
-      ///
-      if ($('#isbn_number').val().length !== 13) {
-        error_message('#isbn_number', 'ISBN Number is not 13 digits');
-      }else{
-        if (modulus_eleven % 11 !== 0) {
-          error_message('#isbn_number', 'ISBN Number is not a valid modulus 11 number');
-        }else{
-          remove_error_message('#isbn_number');
-        }
-       
-      }
-  
-    ////
-
-      if ($('#title').val() === "" ) {
-        error_message('#title', 'Incorrect Title Format');
-      }else{
-        remove_error_message('#title');
-      }
-
-      if ($('#publisher').val() === "" ) {
-        error_message('#publisher', 'Incorrect Publisher Format');
-      }else{
-        remove_error_message('#publisher');
-      }
-
-      if ($('#author').val() === "" ) {
-        error_message('#author', 'Incorrect Author Format');
-      }else{
-        remove_error_message('#author');
-      }
-})
-    
